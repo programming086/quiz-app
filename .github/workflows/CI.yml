@@ -18,4 +18,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_14.2.app
 
     - name: Build and test
-      run: xcodebuild clean build test -project QuizEngine/QuizEngine.xcodeproj -scheme "CI" CODE_SIGNING_REQUIRED=NO
+      run: xcodebuild clean build test -project QuizEngine/QuizEngine.xcodeproj -scheme "CI"
