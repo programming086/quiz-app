@@ -3,9 +3,9 @@ name: CI
 
 on:
   push:
-    branches: [ master improve/ci_codecov]
+    branches: [ master ]
   pull_request:
-    branches: [ master improve/ci_codecov]
+    branches: [ master ]
 
 jobs:
   build-and-test:
