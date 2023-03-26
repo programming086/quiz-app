@@ -18,7 +18,7 @@ jobs:
     
     - name: Extract branch name
       shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      run: echo "##[name=branch;]$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
       id: get_branch
 
     - name: Select Xcode
@@ -27,7 +27,7 @@ jobs:
     - name: Build and test
       run: xcodebuild clean build test -project QuizEngine/QuizEngine.xcodeproj -scheme "CI" -enableCodeCoverage YES
 
-    - name: slather
+    - name: Gather code coverage
       run: bundle exec slather
       env:
           GIT_BRANCH: ${{ steps.get_branch.outputs.branch }}
