@@ -17,9 +17,9 @@ jobs:
     - run: bundle install --without=documentation --jobs 4 --retry 3
     
     - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: get_branch
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: get_branch
 
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_14.2.app
