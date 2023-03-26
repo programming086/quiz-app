@@ -35,4 +35,4 @@ jobs:
           COVERAGE_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Codecov
-       uses: codecov/codecov-action@v3.1.1
+      uses: codecov/codecov-action@v3.1.1
