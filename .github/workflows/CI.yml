@@ -19,3 +19,6 @@ jobs:
 
     - name: Build and test
       run: xcodebuild clean build test -project QuizEngine/QuizEngine.xcodeproj -scheme "CI"
+
+    - name: Codecov
+      uses: codecov/codecov-action@v3.1.1
