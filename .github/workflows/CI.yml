@@ -14,7 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - run: bundle install --without=documentation --jobs 4 --retry 3
+    - name: Bundle
+      run: bundle install --without=documentation --jobs 4 --retry 3
     
     - name: Extract branch name
       shell: bash
