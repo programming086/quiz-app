@@ -11,9 +11,11 @@ import Foundation
 
 final class RouterMock: Router {
     var routeToQuestionCallCount: Int = 0
-    var routeToQuestion_question: String?
-    func routeTo(question: String) {
+    var routeToQuestion_questions: [String] = []
+    var routeToQuestion_answerCallback: Router.AnswerCallback = { _ in }
+    func routeTo(question: String, answerCallback: @escaping Router.AnswerCallback) {
         routeToQuestionCallCount += 1
-        routeToQuestion_question = question
+        routeToQuestion_questions.append(question)
+        routeToQuestion_answerCallback = answerCallback
     }
 }

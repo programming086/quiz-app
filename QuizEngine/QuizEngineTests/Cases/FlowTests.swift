@@ -28,6 +28,7 @@ final class FlowTests: XCTestCase {
         sut.start()
         
         XCTAssertEqual(router.routeToQuestionCallCount, 0)
+        XCTAssertTrue(router.routeToQuestion_questions.isEmpty)
     }
     
     func test_start_withOneQuestion_routesToQuestion() {
@@ -43,7 +44,40 @@ final class FlowTests: XCTestCase {
         
         sut.start()
         
-        XCTAssertEqual(router.routeToQuestion_question, "Q1")
+        XCTAssertEqual(router.routeToQuestion_questions, ["Q1"])
     }
 
+    func test_start_withOneQuestion_routesToCorrectQuestion_2() {
+        sut = Flow(questions: ["Q2"], router: router)
+        
+        sut.start()
+        
+        XCTAssertEqual(router.routeToQuestion_questions, ["Q2"])
+    }
+
+    func test_start_withTwoQuestions_routesToFirstQuestion() {
+        sut = Flow(questions: ["Q1", "Q2"], router: router)
+        
+        sut.start()
+        
+        XCTAssertEqual(router.routeToQuestion_questions, ["Q1"])
+    }
+
+    func test_startTwice_withTwoQuestions_routesToFirstQuestionTwice() {
+        sut = Flow(questions: ["Q1", "Q2"], router: router)
+        
+        sut.start()
+        sut.start()
+        
+        XCTAssertEqual(router.routeToQuestion_questions, ["Q1", "Q1"])
+    }
+
+    func test_startAndAnswerFirstQuestion_withTwoQuestions_routesToDecondQuestion() {
+        sut = Flow(questions: ["Q1", "Q2"], router: router)
+        
+        sut.start()
+        router.routeToQuestion_answerCallback("A1")
+        
+        XCTAssertEqual(router.routeToQuestion_questions, ["Q1", "Q2"])
+    }
 }
