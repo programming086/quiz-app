@@ -34,7 +34,7 @@ private extension Flow {
     func routeNext(from question: String) -> Router.AnswerCallback {
         return { [weak self] _ in
             guard let self else { return }
-            if let currentQuestionIndex = self.questions.index(of: question),
+            if let currentQuestionIndex = self.questions.firstIndex(of: question),
                 currentQuestionIndex + 1 < self.questions.count {
                 let nextQuestion = self.questions[currentQuestionIndex + 1]
                 self.router.routeTo(question: nextQuestion, answerCallback: self.routeNext(from: nextQuestion))
