@@ -18,4 +18,11 @@ final class RouterMock: Router {
         routeToQuestion_questions.append(question)
         routeToQuestion_answerCallback = answerCallback
     }
+    
+    var routeToResultCallCount: Int = 0
+    var routeToResult_result: [String: String]?
+    func routeTo(result: [String: String]) {
+        routeToResultCallCount += 1
+        routeToResult_result = result
+    }
 }
