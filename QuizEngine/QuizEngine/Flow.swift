@@ -36,9 +36,7 @@ class Flow {
 
 private extension Flow {
     func nextCallback(from question: String) -> Router.AnswerCallback {
-        return { [weak self] answer in
-            self?.routeNext(from: question, answer: answer)
-        }
+        return { [weak self] in self?.routeNext(from: question, answer: $0) }
     }
     
     func routeNext(from question: String, answer: String) {
