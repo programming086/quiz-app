@@ -100,4 +100,24 @@ final class FlowTests: XCTestCase {
         XCTAssertEqual(router.routeToQuestion_questions, ["Q1"])
     }
 
+    func test_start_withNoQuestions_routeToResult() throws {
+        sut = Flow(questions: [], router: router)
+        
+        sut.start()
+        
+        let result = try XCTUnwrap(router.routeToResult_result)
+        XCTAssertEqual(result, [:])
+    }
+
+    func test_startAndAnswerFirstAndSecondQuestion_withTwoQuestions_routesToResult() throws {
+        sut = Flow(questions: ["Q1", "Q2"], router: router)
+        
+        sut.start()
+        router.routeToQuestion_answerCallback("A1")
+        router.routeToQuestion_answerCallback("A2")
+        
+        let result = try XCTUnwrap(router.routeToResult_result)
+        XCTAssertEqual(result, ["Q1": "A1", "Q2": "A2"])
+    }
+
 }
