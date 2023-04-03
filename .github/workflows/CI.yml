@@ -18,7 +18,7 @@ jobs:
       run: bundle install --jobs 4 --retry 3
     
     - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_14.2.app
+      run: sudo xcode-select -switch /Applications/Xcode_14.3.app
 
     - name: Build and test
       run: xcodebuild clean build test -project QuizEngine/QuizEngine.xcodeproj -scheme "CI" -enableCodeCoverage YES
