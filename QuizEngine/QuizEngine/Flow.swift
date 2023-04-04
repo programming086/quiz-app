@@ -18,19 +18,19 @@ class Flow {
     private let router: Router
     private let questions: [String]
     private var result: [String: String] = [:]
-    
+
     init(questions: [String], router: Router) {
         self.questions = questions
         self.router = router
     }
-    
+
     func start() {
         if let firstQuestion = questions.first {
             router.routeTo(question: firstQuestion, answerCallback: nextCallback(from: firstQuestion))
         } else {
             router.routeTo(result: result)
         }
-        
+
     }
 }
 
@@ -38,7 +38,7 @@ private extension Flow {
     func nextCallback(from question: String) -> Router.AnswerCallback {
         return { [weak self] in self?.routeNext(from: question, answer: $0) }
     }
-    
+
     func routeNext(from question: String, answer: String) {
         if let currentQuestionIndex = questions.firstIndex(of: question) {
             result[question] = answer

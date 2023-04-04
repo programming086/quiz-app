@@ -11,18 +11,18 @@ import Foundation
 
 final class RouterMock: Router {
     var routeToQuestionCallCount: Int = 0
-    var routeToQuestion_questions: [String] = []
-    var routeToQuestion_answerCallback: Router.AnswerCallback = { _ in }
+    var routeToQuestionQuestions: [String] = []
+    var routeToQuestionAnswerCallback: Router.AnswerCallback = { _ in }
     func routeTo(question: String, answerCallback: @escaping Router.AnswerCallback) {
         routeToQuestionCallCount += 1
-        routeToQuestion_questions.append(question)
-        routeToQuestion_answerCallback = answerCallback
+        routeToQuestionQuestions.append(question)
+        routeToQuestionAnswerCallback = answerCallback
     }
-    
+
     var routeToResultCallCount: Int = 0
-    var routeToResult_result: [String: String]?
+    var routeToResultResult: [String: String]?
     func routeTo(result: [String: String]) {
         routeToResultCallCount += 1
-        routeToResult_result = result
+        routeToResultResult = result
     }
 }
