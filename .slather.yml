@@ -1,5 +1,5 @@
 coverage_service: cobertura_xml
-xcworkspace: QuizApp.xcworkspace
+xcodeproj: QuizApp/QuizApp.xcodeproj
 scheme: CI
 ignore:
   - QuizEngine/QuizEngineTests/*
