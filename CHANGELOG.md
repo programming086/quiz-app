@@ -7,4 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org).
 ## [Unreleased] - yyyy-mm-dd
 
 ### Added
-- add use GitHub actions as CI
+- add use GitHub actions as CI, SwiftLint
+- add QuizEngine
+- add QuizApp
