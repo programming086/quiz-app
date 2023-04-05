@@ -5,6 +5,8 @@ scheme: CI
 ignore:
   - QuizEngine/QuizEngineTests/*
   - QuizApp/QuizAppTests/*
+  - QuizApp/QuizApp/AppDelegate.swift
+  - QuizApp/QuizApp/SceneDelegate.swift
 binary_basename:
   - QuizApp
   - QuizEngine
