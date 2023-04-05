@@ -36,4 +36,14 @@ final class QuestionViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
     }
 
+    func test_viewDidLoad_withOneOption_rendersOneOptionText() {
+        let sut = QuestionViewController(question: "Q1", options: ["A1"])
+        
+        _ = sut.view
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: indexPath)
+        
+        XCTAssertEqual(cell?.textLabel?.text, "A1")
+    }
 }
