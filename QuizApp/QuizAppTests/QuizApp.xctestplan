@@ -9,6 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:QuizApp.xcodeproj",
+          "identifier" : "216336D929DDCD2A00AC9C04",
+          "name" : "QuizApp"
+        },
+        {
+          "containerPath" : "container:..\/QuizEngine\/QuizEngine.xcodeproj",
+          "identifier" : "21C8CF2429BF9110009D8848",
+          "name" : "QuizEngine"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:QuizApp.xcodeproj",
       "identifier" : "216336D929DDCD2A00AC9C04",
@@ -22,6 +36,14 @@
         "containerPath" : "container:QuizApp.xcodeproj",
         "identifier" : "216336EF29DDCD2D00AC9C04",
         "name" : "QuizAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/QuizEngine\/QuizEngine.xcodeproj",
+        "identifier" : "21C8CF2E29BF9110009D8848",
+        "name" : "QuizEngineTests"
       }
     }
   ],
