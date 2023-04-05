@@ -5,3 +5,6 @@ scheme: CI
 ignore:
   - QuizEngine/QuizEngineTests/*
   - QuizApp/QuizAppTests/*
+binary_basename:
+  - QuizApp
+  - QuizEngine
