@@ -21,7 +21,7 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_14.2.app
 
     - name: Build and test
-      run: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" -sdk iphonesimulator  -enableCodeCoverage YES
+      run: xcodebuild clean build test -workspace QuizApp.xcworkspace -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14" -enableCodeCoverage YES
 
     - name: Gather code coverage
       run: bundle exec slather
