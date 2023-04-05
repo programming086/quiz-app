@@ -11,6 +11,9 @@
 		216336E029DDCD2B00AC9C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216336DF29DDCD2B00AC9C04 /* SceneDelegate.swift */; };
 		216336E729DDCD2C00AC9C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216336E629DDCD2C00AC9C04 /* Assets.xcassets */; };
 		216336EA29DDCD2C00AC9C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216336E829DDCD2C00AC9C04 /* LaunchScreen.storyboard */; };
+		2163370F29DDD23200AC9C04 /* QuestionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163370E29DDD23200AC9C04 /* QuestionViewControllerTests.swift */; };
+		2163371129DDD34E00AC9C04 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163371029DDD34E00AC9C04 /* QuestionViewController.swift */; };
+		2163371329DDD5C100AC9C04 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2163371229DDD5C100AC9C04 /* QuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,9 @@
 		216336E929DDCD2C00AC9C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		216336EB29DDCD2C00AC9C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		216336F029DDCD2D00AC9C04 /* QuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2163370E29DDD23200AC9C04 /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
+		2163371029DDD34E00AC9C04 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		2163371229DDD5C100AC9C04 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 				216336E629DDCD2C00AC9C04 /* Assets.xcassets */,
 				216336E829DDCD2C00AC9C04 /* LaunchScreen.storyboard */,
 				216336EB29DDCD2C00AC9C04 /* Info.plist */,
+				2163371029DDD34E00AC9C04 /* QuestionViewController.swift */,
+				2163371229DDD5C100AC9C04 /* QuestionViewController.xib */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -84,8 +92,17 @@
 		216336F329DDCD2D00AC9C04 /* QuizAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2163370D29DDD1D200AC9C04 /* Cases */,
 			);
 			path = QuizAppTests;
+			sourceTree = "<group>";
+		};
+		2163370D29DDD1D200AC9C04 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				2163370E29DDD23200AC9C04 /* QuestionViewControllerTests.swift */,
+			);
+			path = Cases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +159,7 @@
 					};
 					216336EF29DDCD2D00AC9C04 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 216336D929DDCD2A00AC9C04;
 					};
 				};
@@ -172,6 +190,7 @@
 			files = (
 				216336EA29DDCD2C00AC9C04 /* LaunchScreen.storyboard in Resources */,
 				216336E729DDCD2C00AC9C04 /* Assets.xcassets in Resources */,
+				2163371329DDD5C100AC9C04 /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +210,7 @@
 			files = (
 				216336DE29DDCD2B00AC9C04 /* AppDelegate.swift in Sources */,
 				216336E029DDCD2B00AC9C04 /* SceneDelegate.swift in Sources */,
+				2163371129DDD34E00AC9C04 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2163370F29DDD23200AC9C04 /* QuestionViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +415,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -402,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.blogspot.programming086.QuizAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuizApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuizApp";
@@ -413,6 +436,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
