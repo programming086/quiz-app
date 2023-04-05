@@ -37,6 +37,7 @@
 		2163370E29DDD23200AC9C04 /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
 		2163371029DDD34E00AC9C04 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2163371229DDD5C100AC9C04 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		2173D7A029DDE4C200D1C423 /* QuizApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = QuizApp.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		216336F329DDCD2D00AC9C04 /* QuizAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2173D7A029DDE4C200D1C423 /* QuizApp.xctestplan */,
 				2163370D29DDD1D200AC9C04 /* Cases */,
 			);
 			path = QuizAppTests;
