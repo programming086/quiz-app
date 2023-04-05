@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:CHANGELOG.md">
+   </FileRef>
+   <Group
+      location = "group:.github/workflows"
+      name = "workflows">
+      <FileRef
+         location = "group:swiftlint.yml">
+      </FileRef>
+      <FileRef
+         location = "group:CI.yml">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:/Users/brovkoroman/Documents/my/my-quiz-app/Gemfile">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/brovkoroman/Documents/my/my-quiz-app/Gemfile.lock">
+   </FileRef>
+   <FileRef
+      location = "group:QuizApp/QuizApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:QuizEngine/QuizEngine.xcodeproj">
+   </FileRef>
+</Workspace>
