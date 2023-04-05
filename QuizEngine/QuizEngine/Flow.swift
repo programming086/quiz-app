@@ -26,7 +26,7 @@ class Flow {
     private let router: Router
     private let questions: [String]
     private var result: [String: String] = [:]
-    
+
     /// Init
     /// - Parameters:
     ///   - questions: questions
@@ -35,7 +35,7 @@ class Flow {
         self.questions = questions
         self.router = router
     }
-    
+
     /// Start game
     func start() {
         if let firstQuestion = questions.first {
